@@ -54,7 +54,7 @@ def fetch_fpl_data():
 # Main App
 # ---------------------------
 st.set_page_config(layout="wide")
-st.title("⚽ Fantasy Premier League Scatter Plot Explorer")
+# st.title("⚽ FPL data plotting tool")
 
 df = fetch_fpl_data()
 
@@ -74,7 +74,7 @@ all_cols = list(df.columns)  # for color
 col1, col2 = st.columns([1, 3])
 
 with col1:
-    st.subheader("⚙️ Plot Settings")
+    st.subheader("⚙️ FPL plot settings")
     x_col = st.selectbox("X-axis", numeric_cols, index=numeric_cols.index("Now cost"))
     y_col = st.selectbox("Y-axis", numeric_cols, index=numeric_cols.index("Total points"))
     color_col = "Element type"
